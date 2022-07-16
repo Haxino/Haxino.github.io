@@ -2,7 +2,7 @@
 
 You can use the [editor on GitHub](https://github.com/Haxino/Haxino.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-check out project 天猫用户复购预测分析
+check out project [天猫用户复购预测分析](https://github.com/Haxino/Haxino.github.io/天猫复购预测.html)
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
