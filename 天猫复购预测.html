@@ -1,0 +1,1243 @@
+<!DOCTYPE html><html><head>
+      <title>&#x5929;&#x732B;&#x590D;&#x8D2D;&#x9884;&#x6D4B;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Haxino\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="1-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E8%A6%81%E6%B1%82">1. &#x9879;&#x76EE;&#x80CC;&#x666F;&amp;&#x8981;&#x6C42;</h1>
+
+<h2 class="mume-header" id="11-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E8%A7%A3%E8%AF%BB">1.1 &#x9879;&#x76EE;&#x80CC;&#x666F;&#x89E3;&#x8BFB;</h2>
+
+<blockquote>
+<p>&#x672C;&#x9879;&#x76EE;&#x57FA;&#x4E8E;&#x963F;&#x91CC;&#x5929;&#x6C60;&#x5927;&#x8D5B;&#xFF1A;</p>
+</blockquote>
+<p>&#x5546;&#x5BB6;&#x6709;&#x65F6;&#x4F1A;&#x5728;&#x7279;&#x5B9A;&#x65E5;&#x671F;&#xFF0C;&#x4F8B;&#x5982;boxing-day&#xFF0C;&#x9ED1;&#x8272;&#x661F;&#x671F;&#x4E94;&#x6216;&#x662F;&#x53CC;&#x5341;&#x4E00;&#xFF08;11&#x6708;11&#x65E5;&#xFF09;&#x5F00;&#x5C55;&#x5927;&#x578B;&#x518C;&#x5C0F;&#x6D3B;&#x52A8;&#x6216;&#x8005;&#x53D1;&#x653E;&#x4F18;&#x60E0;&#x5238;&#x4EE5;&#x5438;&#x5F15;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x7136;&#x800C;&#x5F88;&#x591A;&#x88AB;&#x5438;&#x5F15;&#x6765;&#x7684;&#x4E70;&#x5BB6;&#x90FD;&#x662F;&#x4E00;&#x6B21;&#x6027;&#x6D88;&#x8D39;&#x8005;&#xFF0C;&#x8FD9;&#x4E9B;&#x4FC3;&#x9500;&#x6D3B;&#x52A8;&#x53EF;&#x80FD;&#x5BF9;&#x9500;&#x552E;&#x4E1A;&#x7EE9;&#x7684;&#x589E;&#x957F;&#x5E76;&#x6CA1;&#x6709;&#x957F;&#x8FDC;&#x5E2E;&#x52A9;&#xFF0C;&#x56E0;&#x6B64;&#x4E3A;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5546;&#x5BB6;&#x9700;&#x8981;&#x8BC6;&#x522B;&#x51FA;&#x54EA;&#x7C7B;&#x6D88;&#x8D39;&#x8005;&#x53EF;&#x4EE5;&#x8F6C;&#x5316;&#x672A;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x8005;&#x3002;&#x901A;&#x8FC7;&#x5BF9;&#x8FD9;&#x4E9B;&#x6F5C;&#x5728;&#x7684;&#x5FE0;&#x8BDA;&#x5BA2;&#x6237;&#x8FDB;&#x884C;&#x5B9A;&#x4F4D;&#xFF0C;&#x5546;&#x5BB6;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x4FC3;&#x9500;&#x6210;&#x672C;&#xFF0C;&#x63D0;&#x9AD8;&#x6295;&#x8D44;&#x56DE;&#x62A5;&#x7387;&#xFF08;ROI&#xFF09;&#x3002;&#x4F17;&#x6240;&#x5468;&#x77E5;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x7EBF;&#x6295;&#x653E;&#x5E7F;&#x544A;&#x65F6;&#x7CBE;&#x51C6;&#x5B9A;&#x4F4D;&#x5BA2;&#x6237;&#x662F;&#x4EF6;&#x6BD4;&#x8F83;&#x56F0;&#x96BE;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x9488;&#x5BF9;&#x65B0;&#x6D88;&#x8D39;&#x7684;&#x5B9A;&#x4F4D;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5229;&#x7528;&#x5929;&#x732B;&#x957F;&#x671F;&#x79EF;&#x7D2F;&#x7684;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x65E5;&#x5FD7;&#xFF0C;&#x6211;&#x4EEC;&#x6216;&#x8BB8;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x90A3;&#x4E9B;&#x590D;&#x8D2D;&#x53EF;&#x80FD;&#x6027;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x5BA2;&#x6237;&#x53D1;&#x653E;&#x4F18;&#x60E0;&#x5238;&#xFF0C;&#x6765;&#x4FC3;&#x6210;&#x9500;&#x552E;&#xFF1B;&#x800C;&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x590D;&#x8D2D;&#x53EF;&#x80FD;&#x6027;&#x8F83;&#x4F4E;&#x7684;&#x5BA2;&#x6237;&#xFF08;&#x4E00;&#x6B21;&#x6027;&#x4EA4;&#x6613;&#x730E;&#x4EBA;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x4FBF;&#x4E0D;&#x518D;&#x53D1;&#x653E;&#x4F18;&#x60E0;&#x5238;&#xFF0C;&#x4EE5;&#x964D;&#x4F4E;&#x6210;&#x672C;</p>
+<h2 class="mume-header" id="12-%E6%98%8E%E7%A1%AE%E7%9B%AE%E6%A0%87">1.2 &#x660E;&#x786E;&#x76EE;&#x6807;</h2>
+
+<p>&#x9879;&#x76EE;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5305;&#x542B;&#x4E86;&#x533F;&#x540D;&#x7528;&#x6237;&#x5728;&#x201D;&#x53CC;&#x5341;&#x4E00;&#x201C;&#x524D;&#x516D;&#x4E2A;&#x6708;&#x548C;&#x201D;&#x53CC;&#x5341;&#x4E00;&#x201C;&#x5F53;&#x5929;&#x7684;&#x8D2D;&#x7269;&#x8BB0;&#x5F55;&#xFF0C;&#x6807;&#x7B7E;&#x672A;&#x662F;&#x5426;&#x662F;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x8005;&#x3002;&#x51FA;&#x4E8E;&#x9690;&#x79C1;&#x4FDD;&#x62A4;&#xFF0C;&#x6570;&#x636E;&#x91C7;&#x6837;&#x5B58;&#x5728;&#x90E8;&#x5206;&#x504F;&#x5DEE;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x4F1A;&#x4E0E;&#x5929;&#x732B;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x5DEE;&#xFF0C;&#x4F46;&#x4E0D;&#x5F71;&#x54CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x9002;&#x7528;&#x6027;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x57FA;&#x4E8E;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x9884;&#x6D4B;&#x7ED9;&#x5B9A;&#x7684;&#x5546;&#x5BB6;&#x4E2D;&#x3002;&#x90A3;&#x4E9B;&#x65B0;&#x6D88;&#x8D39;&#x8005;&#x5728;&#x672A;&#x6765;&#x4F1A;&#x6210;&#x4E3A;&#x5FE0;&#x5B9E;&#x5BA2;&#x6237;&#xFF0C;&#x5373;&#x9700;&#x8981;&#x9884;&#x6D4B;&#x8FD9;&#x4E9B;&#x65B0;&#x6D88;&#x8D39;&#x8005;&#x5728;6&#x4E2A;&#x6708;&#x5185;&#x518D;&#x6B21;&#x8D2D;&#x4E70;&#x7684;&#x6982;&#x7387;&#x3002;</p>
+<h2 class="mume-header" id="13-%E7%9B%B8%E5%85%B3%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86%E8%A1%A5%E5%85%85">1.3 &#x76F8;&#x5173;&#x80CC;&#x666F;&#x77E5;&#x8BC6;&#x8865;&#x5145;</h2>
+
+<blockquote>
+<ul>
+<li>&#x91CD;&#x590D;&#x8D2D;&#x4E70; - MBA &#x667A;&#x5E93;</li>
+<li>&#x7559;&#x5B58;&#x56F0;&#x96BE;&#xFF1F;&#x4F60;&#x662F;&#x5426;&#x5FFD;&#x7565;&#x4E86;&#x590D;&#x8D2D;&#x7684;&#x5206;&#x6790;</li>
+<li>&#x4EA7;&#x54C1;&#x706B;&#x7206;&#x7684;&#x524D;&#x63D0; -- &#x63D0;&#x5347;&#x590D;&#x8D2D;&#x7387;</li>
+</ul>
+</blockquote>
+<h1 class="mume-header" id="2-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF">2 &#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;</h1>
+
+<h2 class="mume-header" id="21-%E5%B0%86%E4%B8%9A%E5%8A%A1%E9%97%AE%E9%A2%98%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98">2.1 &#x5C06;&#x4E1A;&#x52A1;&#x95EE;&#x9898;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x636E;&#x95EE;&#x9898;</h2>
+
+<p>&#x8FD9;&#x91CC;&#x7684;&#x8981;&#x6C42;&#x662F;&#x9884;&#x6D4B;&#x7528;&#x6237;&#x590D;&#x8D2D;&#x6982;&#x7387;&#xFF0C;&#x7528;&#x6237;&#x4EA7;&#x751F;&#x590D;&#x8D2D;&#x7684;&#x884C;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x201D;&#x201C;&#x662F;or&#x5426;&#x201D;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x7528;&#x6237;&#x5206;&#x4E3A;&#x201C;&#x590D;&#x8D2D;&#x201D;&#x4E0E;&#x201C;&#x975E;&#x590D;&#x8D2D;&#x201D;&#x4E24;&#x79CD;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5F97;&#x77E5;&#x7528;&#x6237;&#x7684;&#x590D;&#x8D2D;&#x6982;&#x7387;&#xFF0C;&#x5176;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x6392;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;&#x53C8;&#x8003;&#x8651;&#x5230;&#x6709;&#x590D;&#x8D2D;&#x884C;&#x4E3A;&#x7684;&#x7528;&#x6237;&#x5360;&#x5C11;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x5E73;&#x8861;&#x6570;&#x636E;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4F7F;&#x7528;roc_auc_score&#x8FDB;&#x884C;&#x6A21;&#x578B;&#x8BC4;&#x4F30;</p>
+<blockquote>
+<p>Area Under the Curve of the Receiver Operating Characteristic</p>
+</blockquote>
+<h2 class="mume-header" id="22-%E8%A7%A3%E5%86%B3%E6%B5%81%E7%A8%8B">2.2 &#x89E3;&#x51B3;&#x6D41;&#x7A0B;</h2>
+
+<ul>
+<li>&#x6570;&#x636E;&#x6982;&#x51B5;&amp;&#x6E05;&#x6D17;
+<ul>
+<li>&#x67E5;&#x770B;&#x5404;&#x7279;&#x5F81;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x3001;&#x6709;&#x65E0;&#x7F3A;&#x5931;&#x503C;</li>
+<li>&#x5B8C;&#x6210;&#x6570;&#x636E;&#x6E05;&#x6D17;</li>
+<li>&#x5B8C;&#x6210;&#x591A;&#x6E90;&#x6570;&#x636E;&#x6574;&#x5408;&#xFF08;&#x7528;&#x6237;&#x6570;&#x636E;&#x3001;&#x64CD;&#x4F5C;&#x65E5;&#x5FD7;&#x7B49;&#xFF09;</li>
+</ul>
+</li>
+<li>&#x63A2;&#x7D22;&#x6027;&#x6570;&#x636E;&#x5206;&#x6790;
+<ul>
+<li>&#x63A2;&#x7A76;&#x590D;&#x8D2D;&#x7528;&#x6237;&#x7684;&#x7279;&#x5F81;</li>
+</ul>
+</li>
+<li>&#x7279;&#x5F81;&#x5DE5;&#x7A0B;
+<ul>
+<li>&#x57FA;&#x4E8E;&#x57FA;&#x7840;&#x6570;&#x636E;&#xFF0C;&#x6784;&#x9020;&#x66F4;&#x591A;&#x884D;&#x751F;&#x7279;&#x5F81;</li>
+<li>&#x5C06;&#x7279;&#x5F81;&#x5904;&#x7406;&#x672A;&#x6A21;&#x578B;&#x53EF;&#x8BFB;&#x6837;&#x5F0F;</li>
+</ul>
+</li>
+<li>&#x5EFA;&#x6A21;&amp;&#x4F18;&#x5316;
+<ul>
+<li>&#x6A21;&#x578B;&#x9009;&#x62E9;&#x5206;&#x7C7B;&#x6A21;&#x578B;&#xFF0C;&#x5982;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x3001;&#x51B3;&#x7B56;&#x6811;&#x7B49;</li>
+<li>&#x4F7F;&#x7528;roc_auc_score&#x5BF9;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BC4;&#x4F30;</li>
+<li>&#x4F7F;&#x7528;GridSearchCV&#x5BF9;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x8C03;&#x4F18;</li>
+</ul>
+</li>
+<li>&#x603B;&#x7ED3;&amp;&#x4E1A;&#x52A1;&#x89E3;&#x8BFB;</li>
+</ul>
+<h1 class="mume-header" id="3-%E6%95%B0%E6%8D%AE%E6%A6%82%E5%86%B5%E5%88%86%E6%9E%90">3 &#x6570;&#x636E;&#x6982;&#x51B5;&#x5206;&#x6790;</h1>
+
+<h2 class="mume-header" id="31-%E6%95%B0%E6%8D%AE%E6%BA%90%E6%A6%82%E5%86%B5">3.1 &#x6570;&#x636E;&#x6E90;&#x6982;&#x51B5;</h2>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x5BFC;&#x5165;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x76F8;&#x5173;&#x5E93;</span>
+<span class="token keyword keyword-import">import</span> numpy <span class="token keyword keyword-as">as</span> np
+<span class="token keyword keyword-import">import</span> pandas <span class="token keyword keyword-as">as</span> pd
+<span class="token keyword keyword-import">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword keyword-as">as</span> plt
+<span class="token keyword keyword-import">import</span> seaborn <span class="token keyword keyword-as">as</span> sns
+
+<span class="token operator">%</span>matplotlib inline
+</pre><pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x8BFB;&#x53D6;&#x8BAD;&#x7EC3;&#x96C6;&#x6570;&#x636E;</span>
+train_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">&apos;data/data_format1/train_format1.csv&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x8BFB;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4E0E;&#x64CD;&#x4F5C;&#x65E5;&#x5FD7;&#x6570;&#x636E;</span>
+user_info_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">&apos;data/data_format1/user_info_format1.csv&apos;</span><span class="token punctuation">)</span>
+user_log_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">&apos;data/data_format1/user_log_format1.csv&apos;</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>merchant_id</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>34176</td>
+      <td>3906</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>34176</td>
+      <td>121</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>34176</td>
+      <td>4356</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34176</td>
+      <td>2217</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>230784</td>
+      <td>4818</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">get_base_info</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x6570;&#x636E;&#x7684;&#x524D;5&#x884C;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;\n&#x6570;&#x636E;&#x57FA;&#x672C;&#x4FE1;&#x606F;:&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;\n&#x6570;&#x636E;&#x7684;&#x91CD;&#x590D;&#x503C;&#x6570;&#x91CF;&#xFF1A;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>duplicated<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">&apos;\n&#x6570;&#x636E;&#x7684;&#x57FA;&#x672C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1A;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">get_base_info<span class="token punctuation">(</span>train_data<span class="token punctuation">)</span>
+</pre><pre class="language-text">&#x6570;&#x636E;&#x7684;&#x524D;5&#x884C;
+   user_id  merchant_id  label
+0    34176         3906      0
+1    34176          121      0
+2    34176         4356      1
+3    34176         2217      0
+4   230784         4818      0
+
+&#x6570;&#x636E;&#x57FA;&#x672C;&#x4FE1;&#x606F;:
+&lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;
+RangeIndex: 260864 entries, 0 to 260863
+Data columns (total 3 columns):
+ #   Column       Non-Null Count   Dtype
+---  ------       --------------   -----
+ 0   user_id      260864 non-null  int64
+ 1   merchant_id  260864 non-null  int64
+ 2   label        260864 non-null  int64
+dtypes: int64(3)
+memory usage: 6.0 MB
+None
+
+&#x6570;&#x636E;&#x7684;&#x91CD;&#x590D;&#x503C;&#x6570;&#x91CF;&#xFF1A;
+0
+
+&#x6570;&#x636E;&#x7684;&#x57FA;&#x672C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1A;
+             user_id    merchant_id          label
+count  260864.000000  260864.000000  260864.000000
+mean   211889.321420    2540.292363       0.061151
+std    122399.488027    1451.207514       0.239607
+min         1.000000       2.000000       0.000000
+25%    105488.000000    1340.000000       0.000000
+50%    211927.500000    2482.000000       0.000000
+75%    317670.500000    3898.000000       0.000000
+max    424170.000000    4993.000000       1.000000
+</pre>
+<p>&#x53D1;&#x73B0;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x4E2D;&#x6709;260864&#x6761;&#x6837;&#x672C;&#xFF0C;&#x5E76;&#x672A;&#x53D1;&#x73B0;&#x7F3A;&#x5931;&#x3001;&#x91CD;&#x590D;&#x7684;&#x60C5;&#x51B5;</li>
+<li>&#x53EA;&#x6709;&#x7EA6;6%&#x7684;&#x6570;&#x636E;&#x662F;&#x6B63;&#x6837;&#x672C;&#xFF08;&#x590D;&#x8D2D;&#xFF09;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">get_base_info<span class="token punctuation">(</span>user_info_data<span class="token punctuation">)</span>
+</pre><pre class="language-text">&#x6570;&#x636E;&#x7684;&#x524D;5&#x884C;
+   user_id  age_range  gender
+0   376517        6.0     1.0
+1   234512        5.0     0.0
+2   344532        5.0     0.0
+3   186135        5.0     0.0
+4    30230        5.0     0.0
+
+&#x6570;&#x636E;&#x57FA;&#x672C;&#x4FE1;&#x606F;:
+&lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;
+RangeIndex: 424170 entries, 0 to 424169
+Data columns (total 3 columns):
+ #   Column     Non-Null Count   Dtype  
+---  ------     --------------   -----  
+ 0   user_id    424170 non-null  int64  
+ 1   age_range  421953 non-null  float64
+ 2   gender     417734 non-null  float64
+dtypes: float64(2), int64(1)
+memory usage: 9.7 MB
+None
+
+&#x6570;&#x636E;&#x7684;&#x91CD;&#x590D;&#x503C;&#x6570;&#x91CF;&#xFF1A;
+0
+
+&#x6570;&#x636E;&#x7684;&#x57FA;&#x672C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1A;
+             user_id      age_range         gender
+count  424170.000000  421953.000000  417734.000000
+mean   212085.500000       2.930262       0.341179
+std    122447.476178       1.942978       0.524112
+min         1.000000       0.000000       0.000000
+25%    106043.250000       2.000000       0.000000
+50%    212085.500000       3.000000       0.000000
+75%    318127.750000       4.000000       1.000000
+max    424170.000000       8.000000       2.000000
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#&#x67E5;&#x770B;&#x552F;&#x4E00;&#x503C;&#x6570;&#x91CF;&#xFF0C;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x6709;&#x540C;&#x4E00;&#x4E2A;user&#x5F55;&#x5165;&#x4E24;&#x904D;</span>
+</pre><pre class="language-text">424170
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x66FF;&#x6362;age_range&#x4E2D;&#x7684;&#x7F3A;&#x5931;&#x503C;</span>
+user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>NaN<span class="token punctuation">)</span>
+user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x67E5;&#x770B;age_range&#x7684;&#x5404;&#x7C7B;&#x522B;&#x7EDF;&#x8BA1;&#x60C5;&#x51B5;</span>
+user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>dropna <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sort_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">1.0        24
+2.0     52871
+3.0    111654
+4.0     79991
+5.0     40777
+6.0     35464
+7.0      8258
+NaN     95131
+Name: age_range, dtype: int64
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>dropna <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sort_index<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">&lt;AxesSubplot:&gt;
+</pre>
+<p><img src="output_20_1.png" alt="png"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isna<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span>user_info_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+</pre><pre class="language-text">0.22427564419925974
+</pre>
+<ul>
+<li>age_range&#x4E2D;&#x7F3A;&#x5931;&#x503C;&#x7684;&#x5360;&#x6BD4;&#x6BD4;&#x8F83;&#x9AD8;&#xFF0C;&#x7EA6;&#x4E3A;22.4%</li>
+<li>age_range &#x4E3B;&#x8981;&#x96C6;&#x4E2D;&#x5728;3&#x548C;4&#xFF0C;&#x4E5F;&#x5C31;&#x662F;25-34&#x8FD9;&#x4E2A;&#x533A;&#x95F4;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> user_info_data<span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>NaN<span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span>dropna<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sort_index<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind<span class="token operator">=</span><span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">&lt;AxesSubplot:&gt;
+</pre>
+<p><img src="output_24_1.png" alt="png"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">#value_counts(1) &#x662F;&#x8BA1;&#x7B97;&#x6BD4;&#x4F8B;&#x800C;&#x4E0D;&#x662F;&#x4E2A;&#x6570;</span>
+</pre><pre class="language-text">0.0    0.701283
+1.0    0.298717
+Name: gender, dtype: float64
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_info_data<span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isna<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span>user_info_data<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+</pre><pre class="language-text">0.03975292925006483
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python"></pre><ul>
+<li>gender&#x4E2D;&#x5973;&#x6027;&#x5360;&#x6BD4;&#x6700;&#x9AD8;&#xFF0C;&#x7EA6;&#x4E3A;70%&#xFF1B;&#x7537;&#x6027;&#x5360;&#x6BD4;&#x7EA6;&#x4E3A;30%</li>
+<li>&#x7F3A;&#x5931;&#x503C;&#x5360;&#x6BD4;&#x4E0D;&#x9AD8;&#xFF0C;&#x7EA6;&#x4E3A;4%</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">get_base_info<span class="token punctuation">(</span>user_log_data<span class="token punctuation">)</span> <span class="token comment">#&#x8FD9;&#x91CC;&#x7684;&#x91CD;&#x590D;&#x503C;&#x8868;&#x793A;&#x7528;&#x6237;&#x91CD;&#x590D;&#x70B9;&#x51FB;&#xFF0C;&#x4E0D;&#x7528;&#x5220;&#x9664;&#xFF0C;&#x56E0;&#x4E3A;&#x4E5F;&#x8BF4;&#x660E;&#x4E86;&#x7528;&#x6237;&#x884C;&#x4E3A;</span>
+</pre><pre class="language-text">&#x6570;&#x636E;&#x7684;&#x524D;5&#x884C;
+   user_id  item_id  cat_id  seller_id  brand_id  time_stamp  action_type
+0   328862   323294     833       2882    2661.0         829            0
+1   328862   844400    1271       2882    2661.0         829            0
+2   328862   575153    1271       2882    2661.0         829            0
+3   328862   996875    1271       2882    2661.0         829            0
+4   328862  1086186    1271       1253    1049.0         829            0
+
+&#x6570;&#x636E;&#x57FA;&#x672C;&#x4FE1;&#x606F;:
+&lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;
+RangeIndex: 54925330 entries, 0 to 54925329
+Data columns (total 7 columns):
+ #   Column       Dtype  
+---  ------       -----  
+ 0   user_id      int64  
+ 1   item_id      int64  
+ 2   cat_id       int64  
+ 3   seller_id    int64  
+ 4   brand_id     float64
+ 5   time_stamp   int64  
+ 6   action_type  int64  
+dtypes: float64(1), int64(6)
+memory usage: 2.9 GB
+None
+
+&#x6570;&#x636E;&#x7684;&#x91CD;&#x590D;&#x503C;&#x6570;&#x91CF;&#xFF1A;
+13750198
+
+&#x6570;&#x636E;&#x7684;&#x57FA;&#x672C;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1A;
+            user_id       item_id        cat_id     seller_id      brand_id  \
+count  5.492533e+07  5.492533e+07  5.492533e+07  5.492533e+07  5.483432e+07   
+mean   2.121568e+05  5.538613e+05  8.770308e+02  2.470941e+03  4.153348e+03   
+std    1.222872e+05  3.221459e+05  4.486269e+02  1.473310e+03  2.397679e+03   
+min    1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00   
+25%    1.063360e+05  2.731680e+05  5.550000e+02  1.151000e+03  2.027000e+03   
+50%    2.126540e+05  5.555290e+05  8.210000e+02  2.459000e+03  4.065000e+03   
+75%    3.177500e+05  8.306890e+05  1.252000e+03  3.760000e+03  6.196000e+03   
+max    4.241700e+05  1.113166e+06  1.671000e+03  4.995000e+03  8.477000e+03   
+
+         time_stamp   action_type  
+count  5.492533e+07  5.492533e+07  
+mean   9.230953e+02  2.854458e-01  
+std    1.954305e+02  8.075806e-01  
+min    5.110000e+02  0.000000e+00  
+25%    7.300000e+02  0.000000e+00  
+50%    1.010000e+03  0.000000e+00  
+75%    1.109000e+03  0.000000e+00  
+max    1.112000e+03  3.000000e+00  
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">424170
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;item_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">1090390
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;cat_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">1658
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;seller_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">4995
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;brand_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>nunique<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">8443
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;time_stamp&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;hist&apos;</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">&lt;AxesSubplot:ylabel=&apos;Frequency&apos;&gt;
+</pre>
+<p><img src="output_35_1.png" alt="png"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;time_stamp&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">]</span>
+</pre><pre class="language-text">1111    10582633
+1110     2940826
+1109     1207273
+1108      968099
+1107      857846
+1106      816861
+1105      750696
+1104      713245
+1103      608543
+1101      578776
+1102      577250
+626       550959
+1031      540174
+1030      536699
+1028      368445
+1029      366793
+909       363524
+1021      340836
+617       339845
+1025      329993
+Name: time_stamp, dtype: int64
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;action_type&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">&lt;AxesSubplot:&gt;
+</pre>
+<p><img src="output_37_1.png" alt="png"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_data<span class="token punctuation">[</span><span class="token string">&apos;action_type&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">0    0.883940
+2    0.059939
+3    0.054724
+1    0.001397
+Name: action_type, dtype: float64
+</pre>
+<p>&#x53D1;&#x73B0;&#xFF1A;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x884C;&#x4E3A;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x4EF6;&#x4E3B;&#x8981;&#x96C6;&#x4E2D;&#x5728;&#x53CC;&#x5341;&#x4E00;&#xFF08;&#x5305;&#x542B;&#x9884;&#x70ED;&#x671F;&#xFF09;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF1B;</li>
+<li>&#x884C;&#x4E3A;&#x7C7B;&#x578B;&#xFF0C;&#x6709;88%&#x7684;&#x6BD4;&#x4F8B;&#x90FD;&#x662F;&#x70B9;&#x51FB;&#xFF1B;&#x8D2D;&#x4E70;&#x884C;&#x4E3A;&#x5360;&#x6BD4;&#x7EA6;&#x4E3A;6%</li>
+</ul>
+<h2 class="mume-header" id="32-%E6%95%B0%E6%8D%AE%E6%95%B4%E7%90%86%E6%B8%85%E6%B4%97">3.2 &#x6570;&#x636E;&#x6574;&#x7406;&amp;&#x6E05;&#x6D17;</h2>
+
+<p>&#x5728;&#x65E5;&#x5FD7;&#x4E2D;&#x6709;&#x540C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x591A;&#x540C;&#x4E00;&#x4E2A;&#x5E97;&#x94FA;&#x6709;&#x591A;&#x6761;&#x6837;&#x672C;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5148;&#x8FDB;&#x884C;&#x805A;&#x5408;</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">train_data<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#&#x968F;&#x4FBF;&#x9009;&#x4E00;&#x4E2A;&#x5148;&#xFF0C;&#x4F5C;&#x4E3A;&#x6837;&#x672C;&#x8BD5;&#x4E00;&#x4E0B;&#x805A;&#x5408;&#x7684;&#x4EA4;&#x4E92;</span>
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>merchant_id</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>36735</th>
+      <td>18924</td>
+      <td>2436</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python">tmp <span class="token operator">=</span> user_log_data<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token string">&apos;user_id == 18924 &amp; seller_id == 2436&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span>by <span class="token operator">=</span> <span class="token string">&apos;time_stamp&apos;</span><span class="token punctuation">)</span> <span class="token comment"># &#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5728;&#x4E00;&#x4E2A;&#x5E97;&#x94FA;&#x91CC;&#x7684;&#x6240;&#x6709;&#x65E5;&#x5FD7;</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">tmp
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>item_id</th>
+      <th>cat_id</th>
+      <th>seller_id</th>
+      <th>brand_id</th>
+      <th>time_stamp</th>
+      <th>action_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>50803403</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>50803408</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>50803413</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>50803414</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>50803416</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>50803418</th>
+      <td>18924</td>
+      <td>768715</td>
+      <td>812</td>
+      <td>2436</td>
+      <td>5599.0</td>
+      <td>1111</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_tmp <span class="token operator">=</span> user_log_data<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;seller_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;action_type&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>unstack<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># unstack - &#x884C;&#x5217;&#x8F6C;&#x7F6E;&#x51FD;&#x6570;</span>
+
+user_log_tmp<span class="token punctuation">[</span><span class="token string">&apos;sum&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> user_log_tmp<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+user_log_tmp <span class="token operator">=</span> user_log_tmp<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>columns<span class="token operator">=</span> <span class="token keyword keyword-lambda">lambda</span> x<span class="token punctuation">:</span><span class="token string-interpolation"><span class="token string">f&apos;action_</span><span class="token interpolation"><span class="token punctuation">{</span>x<span class="token punctuation">}</span></span><span class="token string">&apos;</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># f&apos;&apos; - format function</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python">user_log_tmp<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># &#x7F3A;&#x5931;&#x503C;&#x4EE3;&#x8868;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8BE5;&#x884C;&#x4E3A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4EA4;&#x4E92;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x6210;0</span>
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>action_type</th>
+      <th>user_id</th>
+      <th>seller_id</th>
+      <th>action_0</th>
+      <th>action_1</th>
+      <th>action_2</th>
+      <th>action_3</th>
+      <th>action_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>471</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>739</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>925</td>
+      <td>3.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1019</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>1156</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python">user_log_tmp <span class="token operator">=</span> user_log_tmp<span class="token punctuation">.</span>fillna<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">user_log_tmp<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>action_type</th>
+      <th>user_id</th>
+      <th>seller_id</th>
+      <th>action_0</th>
+      <th>action_1</th>
+      <th>action_2</th>
+      <th>action_3</th>
+      <th>action_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>471</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>739</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>925</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1019</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>1156</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x628A;log&#x548C;user info&#x90FD;&#x5408;&#x5E76;&#x5230;train data &#x4E2D;</span>
+
+train_data_with_user <span class="token operator">=</span> train_data<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>user_info_data<span class="token punctuation">,</span> on <span class="token operator">=</span> <span class="token string">&apos;user_id&apos;</span><span class="token punctuation">,</span> how <span class="token operator">=</span> <span class="token string">&apos;left&apos;</span><span class="token punctuation">)</span> 
+train_data_with_user <span class="token operator">=</span> train_data_with_user<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>user_log_tmp<span class="token punctuation">,</span> left_on <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;merchant_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> right_on <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;seller_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> how <span class="token operator">=</span> <span class="token string">&apos;left&apos;</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">train_data_with_user <span class="token operator">=</span> train_data_with_user<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token string">&apos;seller_id&apos;</span><span class="token punctuation">,</span> axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">train_data_with_user<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>merchant_id</th>
+      <th>label</th>
+      <th>age_range</th>
+      <th>gender</th>
+      <th>action_0</th>
+      <th>action_1</th>
+      <th>action_2</th>
+      <th>action_3</th>
+      <th>action_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>34176</td>
+      <td>3906</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>39.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>34176</td>
+      <td>121</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>34176</td>
+      <td>4356</td>
+      <td>1</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34176</td>
+      <td>2217</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>230784</td>
+      <td>4818</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 class="mume-header" id="33-%E6%8E%A2%E7%B4%A2%E6%80%A7%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96">3.3 &#x63A2;&#x7D22;&#x6027;&#x5206;&#x6790;&amp;&#x53EF;&#x89C6;&#x5316;</h2>
+
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x7528;&#x6237;&#x53EF;&#x80FD;&#x5728;&#x51E0;&#x5BB6;&#x5E97;&#x94FA;&#x590D;&#x8D2D;</span>
+train_data_with_user<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token string">&apos;label == 1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">1    15314
+2      304
+3       10
+Name: user_id, dtype: int64
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python">train_data_with_user<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token string">&apos;label == 1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;user_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;hist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><img src="output_54_0.png" alt="png"></p>
+<ul>
+<li>&#x590D;&#x8D2D;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x53EA;&#x5728;&#x4E00;&#x5BB6;&#x5E97;&#x4E2D;&#x6709;&#x590D;&#x8D2D;&#x884C;&#x4E3A;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#&#x54EA;&#x4E9B;&#x5E97;&#x94FA;&#x6BD4;&#x8F83;&#x706B;&#xFF0C;&#x5F88;&#x591A;&#x7528;&#x6237;&#x90FD;&#x6709;&#x590D;&#x8D2D;&#x884C;&#x4E3A;</span>
+train_data_with_user<span class="token punctuation">.</span>query<span class="token punctuation">(</span><span class="token string">&apos;label == 1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;merchant_id&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;hist&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><img src="output_56_0.png" alt="png"></p>
+<ul>
+<li>&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x5E97;&#x94FA;&#x7684;&#x590D;&#x8D2D;&#x7528;&#x6237;&#x90FD;&#x5728;50&#x4E2A;&#x4EE5;&#x5185;&#xFF1B;</li>
+<li>&#x4F46;&#x4E5F;&#x6709;&#x590D;&#x8D2D;&#x7528;&#x6237;&#x5728;200&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x6BD4;&#x8F83;&#x706B;&#x7684;&#x5E97;&#x94FA;&#x3002;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#&#x590D;&#x8D2D;&#x4E0E;&#x5426;&#x548C;&#x5E74;&#x9F84;&#x7684;&#x5173;&#x7CFB;</span>
+train_data_with_user<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>axhline<span class="token punctuation">(</span>y <span class="token operator">=</span> train_data_with_user<span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment"># &#x5927;&#x76D8;&#x5747;&#x503C;&#x753B;&#x4E00;&#x6761;&#x7EA2;&#x7EBF;</span>
+</pre><p><img src="output_58_0.png" alt="png"></p>
+<ul>
+<li>&#x5E74;&#x9F84;&#x5728;4-6&#xFF0C;&#x4E5F;&#x5C31;&#x662F;30-49&#x5C81;&#x7684;&#x7528;&#x6237;&#x590D;&#x8D2D;&#x6982;&#x7387;&#x662F;&#x9AD8;&#x4E8E;&#x5927;&#x76D8;&#x7684;&#xFF0C;&#x540C;&#x6837;&#xFF0C;&#x5728;&#x6570;&#x91CF;&#x4E0A;&#x8FD9;&#x90E8;&#x5206;&#x4EBA;&#x7FA4;&#x4E5F;&#x662F;&#x6838;&#x5FC3;&#x7528;&#x6237;&#x3002;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x590D;&#x8D2D;&#x548C;&#x6027;&#x522B;&#x7684;&#x5173;&#x7CFB;</span>
+train_data_with_user<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>kind <span class="token operator">=</span> <span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>axhline<span class="token punctuation">(</span>y <span class="token operator">=</span> train_data_with_user<span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment"># &#x5927;&#x76D8;&#x5747;&#x503C;&#x753B;&#x4E00;&#x6761;&#x7EA2;&#x7EBF;</span>
+</pre><p><img src="output_60_0.png" alt="png"></p>
+<ul>
+<li>&#x5973;&#x6027;&#x7528;&#x6237;&#x7684;&#x590D;&#x8D2D;&#x6982;&#x7387;&#x9AD8;&#x4E8E;&#x5927;&#x76D8;&#xFF0C;&#x800C;&#x4E14;&#x5973;&#x6027;&#x7528;&#x6237;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x6838;&#x5FC3;&#x7528;&#x6237;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x5E74;&#x9F84;+&#x6027;&#x522B;&#x7684;&#x63A2;&#x7D22;</span>
+age_gender <span class="token operator">=</span> train_data_with_user<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;gender&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;age_range&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">sns<span class="token punctuation">.</span>barplot<span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token string">&apos;age_range&apos;</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token string">&apos;label&apos;</span><span class="token punctuation">,</span> hue <span class="token operator">=</span> <span class="token string">&apos;gender&apos;</span><span class="token punctuation">,</span> data <span class="token operator">=</span> age_gender<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>axhline<span class="token punctuation">(</span>y <span class="token operator">=</span> train_data_with_user<span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment"># &#x5927;&#x76D8;&#x5747;&#x503C;&#x753B;&#x4E00;&#x6761;&#x7EA2;&#x7EBF;;</span>
+</pre><p><img src="output_63_0.png" alt="png"></p>
+<ul>
+<li>&#x5973;&#x6027;&#x7528;&#x6237;&#x5728;&#x4EFB;&#x610F;&#x5E74;&#x9F84;&#x6BB5;&#x590D;&#x8D2D;&#x6982;&#x7387;&#x5747;&#x9AD8;&#x4E8E;&#x540C;&#x5E74;&#x9F84;&#x6BB5;&#x7684;&#x7537;&#x6027;&#x7528;&#x6237;&#xFF1B;</li>
+<li>&#x5728;&#x5E74;&#x9F84;&#x6BB5;&#x672A;4-7&#xFF0C;&#x4E5F;&#x5C31;&#x662F;30&#x5C81;&#x4EE5;&#x4E0A;&#x7684;&#x5973;&#x6027;&#x7528;&#x6237;&#x590D;&#x8D2D;&#x6982;&#x7387;&#x5747;&#x9AD8;&#x4E8E;&#x5927;&#x76D8;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python">train_data_with_user<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>merchant_id</th>
+      <th>label</th>
+      <th>age_range</th>
+      <th>gender</th>
+      <th>action_0</th>
+      <th>action_1</th>
+      <th>action_2</th>
+      <th>action_3</th>
+      <th>action_sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>34176</td>
+      <td>3906</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>36.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>39.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>34176</td>
+      <td>121</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>34176</td>
+      <td>4356</td>
+      <td>1</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>12.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>34176</td>
+      <td>2217</td>
+      <td>0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>230784</td>
+      <td>4818</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x590D;&#x8D2D;&#x548C;&#x4E0D;&#x590D;&#x8D2D;&#x7684;&#x7528;&#x6237;&#x5728;&#x884C;&#x4E3A;&#x6570;&#x91CF;&#x4E0A;&#x662F;&#x5426;&#x6709;&#x5DEE;&#x5F02;(&#x5747;&#x503C;)</span>
+action_agg_mean <span class="token operator">=</span> train_data_with_user<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&apos;action_0&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_3&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_sum&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>mean<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+action_agg_mean <span class="token operator">=</span> action_agg_mean<span class="token punctuation">.</span>stack<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#stack() &#x5217;&#x8F6C;&#x884C;&#xFF0C;&#x7528;&#x4E8E;&#x51C6;&#x5907;&#x753B;&#x56FE;</span>
+action_agg_mean<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;action_type&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;avg&apos;</span><span class="token punctuation">]</span>
+
+sns<span class="token punctuation">.</span>barplot<span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token string">&apos;action_type&apos;</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token string">&apos;avg&apos;</span><span class="token punctuation">,</span> hue <span class="token operator">=</span> <span class="token string">&apos;label&apos;</span><span class="token punctuation">,</span> data <span class="token operator">=</span> action_agg_mean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><img src="output_66_0.png" alt="png"></p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># &#x590D;&#x8D2D;&#x548C;&#x4E0D;&#x590D;&#x8D2D;&#x7684;&#x7528;&#x6237;&#x5728;&#x884C;&#x4E3A;&#x6570;&#x91CF;&#x4E0A;&#x662F;&#x5426;&#x6709;&#x5DEE;&#x5F02;(&#x6807;&#x51C6;&#x5DEE;)</span>
+action_agg_std <span class="token operator">=</span> train_data_with_user<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&apos;action_0&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_1&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_2&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_3&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;action_sum&apos;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>std<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+action_agg_std <span class="token operator">=</span> action_agg_std<span class="token punctuation">.</span>stack<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#stack() &#x5217;&#x8F6C;&#x884C;&#xFF0C;&#x7528;&#x4E8E;&#x51C6;&#x5907;&#x753B;&#x56FE;</span>
+action_agg_std<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;label&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;action_type&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;std&apos;</span><span class="token punctuation">]</span>
+
+sns<span class="token punctuation">.</span>barplot<span class="token punctuation">(</span>x <span class="token operator">=</span> <span class="token string">&apos;action_type&apos;</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token string">&apos;std&apos;</span><span class="token punctuation">,</span> hue <span class="token operator">=</span> <span class="token string">&apos;label&apos;</span><span class="token punctuation">,</span> data <span class="token operator">=</span> action_agg_std<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><img src="output_67_0.png" alt="png"></p>
+<ul>
+<li>&#x9664;&#x4E86;action_1&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6DFB;&#x52A0;&#x8D2D;&#x7269;&#x8F66;&#x884C;&#x4E3A;&#xFF09;&#xFF0C;&#x590D;&#x8D2D;&#x7528;&#x6237;&#x7684;&#x4E0E;&#x5E97;&#x94FA;&#x4EA4;&#x4E92;&#x6B21;&#x6570;&#x5747;&#x503C;&#x3001;&#x6807;&#x51C6;&#x5DEE;&#x5747;&#x9AD8;&#x4E8E;&#x975E;&#x590D;&#x8D2D;&#x7528;&#x6237;</li>
+</ul>
+<h2 class="mume-header" id="34-%E6%80%BB%E7%BB%93">3.4 &#x603B;&#x7ED3;</h2>
+
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5BF9;424170&#x540D;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;4995&#x4E2A;&#x5E97;&#x94FA;&#x7684;&#x4EA4;&#x4E92;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x53D1;&#x73B0;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x5F81;&#x7684;&#x7528;&#x6237;&#x6709;&#x66F4;&#x9AD8;&#x7684;&#x590D;&#x8D2D;&#x6982;&#x7387;&#xFF1A;</p>
+<ul>
+<li>&#x5973;&#x6027;&#xFF1B;</li>
+<li>&#x5E74;&#x9F84;&#x6BB5;&#x5728;30-49&#x5C81;&#x4E4B;&#x95F4;&#xFF1B;</li>
+<li>&#x4E0E;&#x5E97;&#x94FA;&#x7684;&#x4EA4;&#x4E92;&#x884C;&#x4E3A;&#x603B;&#x6B21;&#x6570;&#x8D85;&#x8FC7;10&#x6B21;&#x3002;</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python">train_data<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><pre class="language-text">&lt;class &apos;pandas.core.frame.DataFrame&apos;&gt;
+RangeIndex: 260864 entries, 0 to 260863
+Data columns (total 3 columns):
+ #   Column       Non-Null Count   Dtype
+---  ------       --------------   -----
+ 0   user_id      260864 non-null  int64
+ 1   merchant_id  260864 non-null  int64
+ 2   label        260864 non-null  int64
+dtypes: int64(3)
+memory usage: 6.0 MB
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token builtin">sum</span><span class="token punctuation">(</span>train_data<span class="token punctuation">.</span>duplicated<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x91CD;&#x590D;&#x503C;</span>
+</pre><pre class="language-text">0
+</pre>
+<pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre><pre data-role="codeBlock" data-info="python" class="language-python"></pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
